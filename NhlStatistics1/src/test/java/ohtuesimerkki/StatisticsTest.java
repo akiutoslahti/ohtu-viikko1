@@ -3,16 +3,13 @@ package ohtuesimerkki;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class StatisticsTest {
 
-    Reader readerStub = new Reader() {
+    private Reader readerStub = new Reader() {
 
         public List<Player> getPlayers() {
             ArrayList<Player> players = new ArrayList<Player>();
@@ -27,7 +24,7 @@ public class StatisticsTest {
         }
     };
 
-    Statistics stats;
+    private Statistics stats;
 
     @Before
     public void setUp() {

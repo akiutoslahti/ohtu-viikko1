@@ -39,18 +39,16 @@ public class Statistics {
         if (howMany <= 0) {
             return null;
         }
-        
-        if (howMany > players.size()) {
-            howMany = players.size();
-        }
+
+        int count = Math.min(howMany, players.size());
         
         Collections.sort(players);
         ArrayList<Player> topScorers = new ArrayList<Player>();
         Iterator<Player> playerIterator = players.iterator();
         
-        while (howMany>0) {
+        while (count>0) {
             topScorers.add( playerIterator.next() );            
-            howMany--;
+            count--;
         }
         
         return topScorers;
