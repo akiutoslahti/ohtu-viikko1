@@ -42,7 +42,7 @@ public class VarastoTest {
     public void konstruktoriAlkusaldollaNegAlkuSal() {
         varasto = new Varasto(10, -1);
         assertEquals(10, varasto.getTilavuus(), vertailuTarkkuus);
-        assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
+        assertEquals(-1, varasto.getSaldo(), vertailuTarkkuus);
     }
 
     @Test
