@@ -39,7 +39,7 @@ jar {
 apply plugin: "jacoco"
 
 jacocoTestReport {
-    report {
+    reports {
         xml.enabled true
         html.enabled true
     }
